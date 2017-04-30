@@ -46,6 +46,7 @@ namespace GRADES
 
             Random ran = new Random();
 
+            // abel is the best brother in the whole wide world
             int num = ran.Next(1, 100);
 
             string result = "";
