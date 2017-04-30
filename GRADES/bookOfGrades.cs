@@ -14,13 +14,18 @@ namespace GRADES
             grades = new List<float>();
         }
 
+        public int NumOfGrades()
+        {
+            return grades.Count;
+        }
+
         public Gstats ComputeStatistics()
         {
             Gstats stats = new Gstats();
 
 
             float sum = 0;
-                foreach(float grade in grades)
+            foreach(float grade in grades)
             {
                 stats.HighestGrade = Math.Max(grade, stats.HighestGrade);
                 stats.LowestGrade = Math.Min(grade, stats.LowestGrade);
@@ -36,9 +41,23 @@ namespace GRADES
 
         }
 
-        public string Name;
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
 
-        List<float> grades;
+            set
+            {
+                if (!String.IsNullOrEmpty(value))
+                {
+                    _name = value;
+                }
+            }
+        }
+        private string _name;
+         List<float> grades;
     }
 }
 

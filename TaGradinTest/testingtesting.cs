@@ -19,17 +19,19 @@ namespace TaGradinTest
             int x2 = x1;
 
             x1 = 4;
-            Assert.AreEqual(x1, x2);
+            Assert.AreNotEqual(x1, x2);
         }
 
         [TestMethod]
-        public void bookOfGradesVariablesHoldAReference()
+        public void BookOfGradesVariablesHoldAReference()
         {
             BookOfGrades g1 = new BookOfGrades();
             BookOfGrades g2 = g1;
 
             g1.Name = "Brooklyn's book of grades";
             Assert.AreEqual(g1.Name, g2.Name);
+
+            
 
         }
     }
