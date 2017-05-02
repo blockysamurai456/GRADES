@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -59,7 +60,7 @@ namespace GRADES
                     args.ExistingName = _name;
                     args.NewName = value;
 
-                    NameChanged ISayNameIsChanging = NameChanged();
+                    
 
                    NameChanged(this, args);
                 }
@@ -68,9 +69,17 @@ namespace GRADES
             }
         }
 
+        public void WriteGrades(TextWriter destination)
+        {
+            for (int i = 0; i < grades.Count; i++)
+            {
+                destination.WriteLine(grades[i]);
+            }
+        }
+
         public event NameChangedDelegate NameChanged;
 
         private string _name;
-        protected List<float> grades;
+        protected List<float> grades; 
     }
 }

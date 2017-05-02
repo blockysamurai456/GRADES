@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bookOfGrades.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Gstats.cs" />
     <Compile Include="NameChangedDelegate.cs" />
     <Compile Include="NameChangedEventArgs.cs" />

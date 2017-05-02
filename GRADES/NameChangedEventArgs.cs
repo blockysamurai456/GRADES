@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GRADES
 {
-    public class NameChangedEventArgs : EventArgs
+    public class NameChangedEventArgs
     {
         public string ExistingName { get; set; }
         public string NewName { get; set; }
