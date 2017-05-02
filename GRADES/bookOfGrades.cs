@@ -59,7 +59,9 @@ namespace GRADES
                     args.ExistingName = _name;
                     args.NewName = value;
 
-                   
+                    NameChanged ISayNameIsChanging = NameChanged();
+
+                   NameChanged(this, args);
                 }
 
                 _name = value;
