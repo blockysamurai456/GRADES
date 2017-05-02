@@ -11,7 +11,14 @@ namespace GRADES
             int num = ran.Next(1, 100);
 
             BookOfGrades book1 = new BookOfGrades();
+
+
+
+
+
+
             book1.Name = "Brooklyn's book of grades";
+
             book1.AddGrade(ran.Next(1, 100));
             book1.AddGrade(ran.Next(1, 100));
             book1.AddGrade(ran.Next(1, 100));
@@ -37,24 +44,26 @@ namespace GRADES
             Gstats stats = book1.ComputeStatistics();
             Console.WriteLine(book1.Name);
             WriteResult("Average", stats.AverageGrade);
-            WriteResult("Highest", (int)stats.HighestGrade);
+            WriteResult("Highest", stats.HighestGrade);
             WriteResult("Lowest", stats.LowestGrade);
+            WriteResult(stats.Description, stats.LetterGrade);
         }
+
 
         static void CurrentGrades(int numOfGrades)
         {
 
             Random ran = new Random();
 
-            // abel is the best brother in the whole wide world
+            // abel is the best brother in the whole wide world...in a parralel universe!!
             int num = ran.Next(1, 100);
 
             string result = "";
-            if(numOfGrades == 1)
+            if (numOfGrades == 1)
             {
                 result = "currently low";
             }
-            else if(numOfGrades == 2)
+            else if (numOfGrades == 2)
             {
                 result = "currently one tenth full";
             }
@@ -136,7 +145,7 @@ namespace GRADES
             talk.Speak("hello, this is the book of grades which is" + result);
         }
 
-        static void WriteResult(string description, int result)
+        static void WriteResult(string description, string result)
         {
             Console.WriteLine(description + ": " + result);
         }
