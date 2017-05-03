@@ -11,7 +11,7 @@ namespace GRADES
     {
         public BookOfGrades()
         {
-            _name = "Empty";
+            
             grades = new List<float>();
         }
 
@@ -39,47 +39,8 @@ namespace GRADES
             grades.Add(grade);
 
         }
+        public string Name;
 
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-
-            set
-            {
-                if (String.IsNullOrEmpty(value))
-                {
-                    throw new ArgumentException("Name cannot be null or empty");
-                }
-
-                if (_name != value)
-                {
-                    NameChangedEventArgs args = new NameChangedEventArgs();
-                    args.ExistingName = _name;
-                    args.NewName = value;
-
-                    
-
-                   NameChanged(this, args);
-                }
-
-                _name = value;
-            }
-        }
-
-        public void WriteGrades(TextWriter destination)
-        {
-            for (int i = 0; i < grades.Count; i++)
-            {
-                destination.WriteLine(grades[i]);
-            }
-        }
-
-        public event NameChangedDelegate NameChanged;
-
-        private string _name;
-        protected List<float> grades; 
+        private List<float> grades;
     }
 }

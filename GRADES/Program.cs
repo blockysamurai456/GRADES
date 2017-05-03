@@ -7,39 +7,32 @@ namespace GRADES
     {
         static void Main(string[] args)
         {
-            Random ran = new Random();
-            int num = ran.Next(1, 100);
 
             BookOfGrades book1 = new BookOfGrades();
 
-
-
-
-
-
+               
             book1.Name = "Brooklyn's book of grades";
 
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.AddGrade(ran.Next(1, 100));
-            book1.WriteGrades(Console.Out);
+            book1.AddGrade(67);
+            book1.AddGrade(57);
+            book1.AddGrade(63);
+            book1.AddGrade(61);
+            book1.AddGrade(77);
+            book1.AddGrade(47);
+            book1.AddGrade(60);
+            book1.AddGrade(2);
+            book1.AddGrade(7);
+            book1.AddGrade(6);
+            book1.AddGrade(16);
+            book1.AddGrade(23);
+            book1.AddGrade(57);
+            book1.AddGrade(38);
+            book1.AddGrade(94);
+            book1.AddGrade(69);
+            book1.AddGrade(99);
+            book1.AddGrade(12);
+            book1.AddGrade(17);
+            book1.AddGrade(87);
             CurrentGrades(book1.NumOfGrades());
 
             Gstats stats = book1.ComputeStatistics();
@@ -47,9 +40,7 @@ namespace GRADES
             WriteResult("Average", stats.AverageGrade);
             WriteResult("Highest", stats.HighestGrade);
             WriteResult("Lowest", stats.LowestGrade);
-            WriteResult(stats.Description, stats.LetterGrade);
-            
-        }
+            }
 
 
         static void CurrentGrades(int numOfGrades)
@@ -157,4 +148,4 @@ namespace GRADES
             Console.WriteLine(description + ": " + result);
         }
     }
-}
+}  
